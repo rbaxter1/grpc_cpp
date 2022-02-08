@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  fix-flow:
+    image: rbaxter/grpc_cpp:latest
+    entrypoint: ./grpc_cpp
+    ports:
+      - "50051:50051"

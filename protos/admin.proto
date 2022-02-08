@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message TagsRequest {
+	string connection = 1;
+	string message_name = 2;
+}
+
+message Tag {
+	int32 tag = 1;
+	string name = 2;
+}
+
+message TagsReply {
+	repeated Tag header = 1;
+	repeated Tag body = 2;
+	repeated Tag trailer = 3;
+}
+
+service Admin {
+	rpc Tags (TagsRequest) returns (TagsReply) {}
+	rpc TagMe (TagsRequest) return (stream TagsReply)
+}
