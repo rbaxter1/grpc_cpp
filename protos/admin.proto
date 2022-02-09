@@ -18,5 +18,7 @@ message TagsReply {
 
 service Admin {
 	rpc Tags (TagsRequest) returns (TagsReply) {}
-	rpc TagMe (TagsRequest) return (stream TagsReply)
+	rpc TagMe (TagsRequest) returns (stream TagsReply) {}
 }
+
+
