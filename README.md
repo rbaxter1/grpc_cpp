@@ -70,7 +70,6 @@ From the root directory in the repo there is a Dockerfile you can build simply w
 add  --no-cache if you want to rebuild the entire container like so:
 `docker build . --no-cache`
 
-
 The compose file expects the container to be tagged rbaxter\grpc_cpp so you could either change the compose file to point to the proper container or tag the container with this name:
 
 `docker tag <image_id> rbaxter\grpc_cpp:latest`
